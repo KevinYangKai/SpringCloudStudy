@@ -1,0 +1,15 @@
+#server:
+#  port: 1111
+
+eureka:
+#  instance:
+#    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+#    serverUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+spring:
+  profiles:
+    active: peer2
