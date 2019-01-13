@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/KevinYangKai/SpringCloudStudy/
+          username: KevinYangKai
+          password: yk19950102
+server:
+  port: 7001

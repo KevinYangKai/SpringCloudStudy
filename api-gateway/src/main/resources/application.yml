@@ -11,6 +11,12 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: feign-consumer
+  ThrowExceptionFilter:
+    pre:
+      disable: true
+  AccessFilter:
+    pre:
+      disable: true
 eureka:
   client:
     service-url:
