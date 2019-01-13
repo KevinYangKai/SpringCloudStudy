@@ -4,9 +4,26 @@ spring:
   cloud:
     config:
       server:
+        #配置git仓库
         git:
-          uri: https://github.com/KevinYangKai/SpringCloudStudy/
+          uri: https://github.com/KevinYangKai/SpringCloudStudy.git
           username: KevinYangKai
           password: yk19950102
+          search-paths: /config-repo
+        #配置属性覆盖
+        overrides:
+          name: Kevin
+          from: ShangHai
 server:
   port: 7001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
+security:
+  user:
+    name: kevin
+    password: yk19950102
+#配置密钥
+encrypt:
+  key: kevin
