@@ -11,9 +11,9 @@ spring:
           password: yk19950102
           search-paths: /config-repo
         #配置属性覆盖
-        overrides:
-          name: Kevin
-          from: ShangHai
+#        overrides:
+#          name: Kevin
+#          from: ShangHai
 server:
   port: 7001
 eureka:
