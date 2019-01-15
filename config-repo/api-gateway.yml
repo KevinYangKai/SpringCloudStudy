@@ -1,0 +1,8 @@
+zuul:
+  route:
+    service-a:
+      path: /service-a/**
+      service-id: hello-server
+    service-b:
+      path: /service-b/**
+      url: http://localhost:8001/
