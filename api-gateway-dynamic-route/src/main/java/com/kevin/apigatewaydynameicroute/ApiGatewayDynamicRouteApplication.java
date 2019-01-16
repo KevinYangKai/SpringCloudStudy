@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Bean;
 
 @EnableZuulProxy
 @SpringCloudApplication
-public class ApiGatewayDynamicRoute {
+public class ApiGatewayDynamicRouteApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiGatewayDynamicRoute.class, args);
+        SpringApplication.run(ApiGatewayDynamicRouteApplication.class, args);
     }
 
     @Bean
