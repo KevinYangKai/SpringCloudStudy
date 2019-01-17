@@ -22,6 +22,7 @@
         <module>config-client</module>
         <module>api-gateway-dynamic-route</module>
         <module>api-gateway-dynamic-filter</module>
+        <module>rabbit-mq</module>
     </modules>
 
 </project>
