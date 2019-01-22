@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/KevinYangKai/SpringCloudStudy.git
+          username: KevinYangKai
+          password: yk19950102
+          search-paths: /config-repo
+server:
+  port: 7001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/

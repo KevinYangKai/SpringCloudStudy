@@ -23,6 +23,9 @@
         <module>api-gateway-dynamic-route</module>
         <module>api-gateway-dynamic-filter</module>
         <module>rabbitmq-hello</module>
+        <module>config-server-kafka</module>
+        <module>config-client-kafka</module>
+        <module>stream-hello</module>
     </modules>
 
 </project>
