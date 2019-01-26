@@ -26,6 +26,8 @@
         <module>config-server-kafka</module>
         <module>config-client-kafka</module>
         <module>stream-hello</module>
+        <module>trace-1</module>
+        <module>trace-2</module>
     </modules>
 
 </project>
