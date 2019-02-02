@@ -1,5 +1,7 @@
 package com.kevin.trace2;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -7,18 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.logging.Logger;
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @EnableDiscoveryClient
 @SpringBootApplication
 public class Trace2Application {
 
-    private final Logger logger = (Logger) Logger.getLogger(String.valueOf(getClass()));
+    private final Logger logger = LoggerFactory.getLogger(String.valueOf(getClass()));
 
     @RequestMapping(value = "/trace-2", method = RequestMethod.GET)
-    public String trace() {
-        logger.info("===<call trace-2>===");
+    public String trace(HttpServletRequest request) {
+        logger.info("===<call trace-2, TraceId={}, SpanId={}>===", request.getHeader("X-B3-TraceId"), request.getHeader("X-B3-SpanId"));
         return "trace";
     }
 
