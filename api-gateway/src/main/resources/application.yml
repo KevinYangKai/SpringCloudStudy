@@ -6,10 +6,10 @@ server:
 zuul:
   routes:
     api-a:
-      path: /api-a/**
+      path: /a/**
       serviceId: hello-service
     api-b:
-      path: /api-b/**
+      path: /b/**
       serviceId: feign-consumer
   ThrowExceptionFilter:
     pre:

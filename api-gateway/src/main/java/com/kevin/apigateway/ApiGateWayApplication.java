@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Bean;
 
 @EnableZuulProxy
 @SpringCloudApplication
-public class ApiGateApplication {
+public class ApiGateWayApplication {
 
     public static void main(String[] args) {
         FilterProcessor.setProcessor(new MyFilterProcessor());
-        new SpringApplicationBuilder(ApiGateApplication.class).web(true).run(args);
+        new SpringApplicationBuilder(ApiGateWayApplication.class).web(true).run(args);
     }
 
     @Bean
